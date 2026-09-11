@@ -1,0 +1,1652 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    /*--------------index.html--------------*/
+
+    /*header*/
+
+    --color-nav-li: #F9F6F0;
+    --bg-dark-block: linear-gradient(
+            rgb(25, 19, 17),
+            rgba(11, 9, 5, 0.2)
+    );
+
+    /*booking-button*/
+
+    --border-booking_button: 1px solid #433708;
+    --bg-booking_button: #F9C06A;
+    --color-booking_button: #404040;
+    --bg-booking_button-hover: #FFE0B1;
+    --bg-booking_button-active: #998463;
+    --color-booking_button-active: #EDEDED;
+
+    /*text*/
+
+    --color-name_shop-shadow: 4px 5px #7B5D48;
+    --color-clogan_text-shadow: 1px 1px #7B5D48;
+    --box-shadow-booking_button: 0 3px 6.3px #503421;
+    --color-heading-block: #403F3F;
+
+    /*О нас*/
+
+    --bg-block-about-us: #3D3C3A;
+    --color-text-about-us: #FFD7BA;
+
+    /*Наша команда*/
+
+    --bg-block_our-team: rgba(249, 192, 106, 0.25);
+    --bg-marker-heading: rgba(124, 124, 124, 0.22);
+    --color-text-employee: #313131;
+    --border-tr_section: 1px solid #7B5D48;
+
+    /*Бронь столика*/
+
+    --color-table-reservation: #EBEBEB;
+    --color-plaseholder-table-reservation: #535353;
+    --block-table-reservation: #3D3C3A;
+
+    /*footer*/
+
+    --color-footer: #FFD7BA;
+    --bg-footer: #3D3C3A;
+
+    /*Акция*/
+
+    --color-sale-span: #E38B26;
+
+}
+
+
+body {
+    background: url("../images/pattern.png");
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---------------------------------index.html---------------------------------*/
+
+
+/*Header*/
+header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 82px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 56px;
+    height: 68px;
+    margin-left: 51px;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 81px;
+    z-index: 2;
+}
+
+.navigation__item {
+    list-style: none;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #F9F6F0;
+    font-size: 16px;
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+    font-style: normal;
+}
+
+.dark-block {
+    position: absolute;
+    opacity: 0.61;
+    background: var(--bg-dark-block);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.img-header {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -2;
+}
+
+.block-header .menu-img {
+    background-image: url("../images/img-header-menu.png");
+}
+
+.block-header .main-img {
+    background-image: url("../images/img-header-main.png");
+}
+
+.block-header .accessories-img {
+    background-image: url("../images/img-header-accessories.png");
+}
+
+.block-header .reviews-img {
+    background-image: url("../images/img-header-reviews.png");
+}
+
+.block-header .sale-img {
+    background-image: url("../images/img-header-sale.png");
+}
+
+.block-header .support-img {
+    background-image: url("../images/img-header-support.jpeg");
+}
+
+.block-header .about-img {
+    background-image: url("../images/img-header-about.jpeg");
+}
+
+.block-header .login-img {
+    background-image: url("../images/img-header-login.jpeg");
+}
+
+.block-header .registration-img {
+    background-image: url("../images/img-header-registration.jpeg");
+}
+.block-header .product-img{
+    background-image: url("../images/img-card-compressed.jpeg");
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-right: 100px;
+    z-index: 2;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 234px;
+    height: 100vh;
+    color: #EDEDED;
+}
+
+.name_coffee_shop {
+    font-size: 54.36px;
+    font-family: 'Climate_Crisis', Arial, sans-serif;
+    text-shadow: var(--color-name_shop-shadow);
+}
+
+.slogan {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: var(--color-clogan_text-shadow);
+    margin-top: 26px;
+    margin-bottom: 139px;
+}
+
+.booking_button-link {
+    text-decoration: none;
+}
+
+.accent_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+    padding: 10px;
+    border-radius: 58px;
+    cursor: pointer;
+    background: var(--bg-booking_button);
+    color: var(--color-booking_button);
+    font-size: 18px;
+    box-shadow: var(--box-shadow-booking_button);
+    transition: .6s;
+    border: none;
+    border: var(--border-booking_button);
+
+}
+
+.booking-btn {
+    width: 283px;
+}
+
+.accent_button:hover {
+    background: var(--bg-booking_button-hover);
+}
+
+.accent_button:active {
+    background: var(--bg-booking_button-active);
+    color: var(--color-booking_button-active);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    width: 1100px;
+}
+
+/*О нас*/
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.line-pattern {
+    display: flex;
+    margin-bottom: 88px;
+}
+
+
+.block_about-us {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 529px;
+    background: var(--bg-block-about-us);
+    border-radius: 28px;
+}
+
+.block-employee_avatar--phone {
+    display: none;
+    width: 220px;
+    height: 220px;
+    margin-right: 65px;
+    border-radius: 99999px;
+}
+
+
+.text-heading-about-us {
+    font-family: 'Climate_Crisis', Arial, sans-serif;
+    font-size: 54.36px;
+    color: var(--color-text-about-us);
+    margin-left: 65px;
+    margin-top: 47.82px;
+}
+
+.text-about-us {
+    width: 433px;
+    font-size: 20px;
+    color: var(--color-text-about-us);
+    margin-left: 66px;
+    margin-top: 34px;
+}
+
+/*Наша команда*/
+
+.block_img img {
+    width: 540px;
+    height: 529px;
+    border-radius: 0 28px 28px 0;
+}
+
+.transparent-sections,
+.table-reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.transparent-sections-heading,
+.table-reservation-sections-heading {
+    display: flex;
+    justify-content: center;
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+    font-size: 46px;
+    margin-top: 88px;
+    color: var(--color-heading-block);
+}
+
+
+.tr_section {
+    background: var(--bg-block_our-team);
+    border: var(--border-tr_section);
+    border-radius: 28px;
+    width: 100%;
+
+}
+
+.block_our-team {
+    height: 1190px;
+}
+
+.block-employee {
+    display: flex;
+    width: 100%;
+    margin-left: 65px;
+    margin-top: 64px;
+}
+
+.block-employee_avatar {
+    width: 220px;
+    height: 220px;
+    margin-right: 65px;
+    border-radius: 99999px;
+
+}
+
+.block-employee_text {
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+    width: 70%;
+    height: auto;
+}
+
+.marker-heading {
+    height: 47px;
+    border-radius: 15px;
+    background: var(--bg-marker-heading);
+}
+
+.marker-heading-one {
+    width: 277px;
+}
+
+.marker-heading-two {
+    width: 174px;
+}
+
+.marker-heading-three {
+    width: 209px;
+}
+
+.marker-heading-four {
+    width: 304px;
+}
+
+.marker-heading-five {
+    width: 412px;
+}
+
+.roles_text {
+    font-size: 32px;
+    color: var(--color-text-employee);
+    margin-left: 7px;
+}
+
+.description_text {
+    margin-top: 8px;
+    width: 70%;
+    height: auto;
+}
+
+.dividing-line {
+    background: var(--color-text-employee);
+    width: 610px;
+    height: 1px;
+    margin-top: 19px;
+}
+
+/*Про сорта кофе и чая*/
+
+.block-about-the-varieties {
+    height: 860px;
+}
+
+.block-varieties {
+    display: flex;
+    margin-left: 65px;
+    margin-top: 60px;
+    gap: 31px;
+}
+
+.block-varieties-img {
+    width: 475px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.block-varieties_text {
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+    font-size: 21px;
+}
+
+.text-varieties {
+    width: 457px;
+}
+
+
+/*Бронь столика*/
+
+.block-table-reservation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 640px;
+    background-color: var(--block-table-reservation);
+    border-radius: 28px;
+    margin-bottom: 285px;
+}
+
+.form-table-reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-top: 19.43px;
+}
+
+.form-table-reservation-heading {
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--color-table-reservation);
+}
+
+.form-table-reservation input {
+    width: 410px;
+    height: 60.17px;
+    margin: 15px 0;
+    border-radius: 9999px;
+    padding-left: 25px;
+    font-size: 20px;
+    background-color: var(--color-table-reservation);
+    border: 1px solid var(--color-plaseholder-table-reservation);
+}
+
+.form-table-reservation button {
+    margin-top: 32px;
+}
+
+.form-table-reservation input:focus {
+    outline: none;
+}
+
+.form-table-reservation input::placeholder {
+    color: var(--color-plaseholder-table-reservation);
+}
+
+.img-table-reservation {
+    width: 570px;
+    height: 100%;
+    border-radius: 0 28px 28px 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 462px;
+    background: var(--bg-footer);
+    color: var(--color-footer);
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+}
+
+.block-footer-one {
+    display: flex;
+    justify-content: space-between;
+    width: 945px;
+    height: auto;
+    margin: 90px 242px 74px 253px;
+}
+.block-icons a{
+    color:var(--color-footer);
+}
+
+.group-img {
+    width: 271px;
+    height: 180px;
+}
+
+.footer-logo {
+    margin: 0 106px;
+}
+
+.block-icons {
+    margin-top: 23px;
+}
+
+.icon-tell {
+    display: flex;
+    gap: 9px;
+}
+
+.icon-email {
+    display: flex;
+    gap: 9px;
+}
+
+.group-navigation {
+    width: 142px;
+    height: 210px;
+}
+
+.navigation-footer__item {
+    margin-bottom: 16px;
+}
+
+.navigation-footer__list {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.navigation-footer__link {
+    text-decoration: none;
+    color: var(--color-footer);
+}
+
+.group-social-network {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 142px;
+    gap: 15px;
+    height: 67px;
+}
+
+.block-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.block-footer-two {
+    height: 86px;
+    width: 100%;
+}
+
+.group-pattern {
+    width: 100%;
+}
+
+.group-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Copyright {
+    margin: 0 0 22px 102px;
+}
+
+.Discover {
+    margin: 0 62px 22px 0;
+}
+
+/*---------------------------------menu.html / accessories.html---------------------------------*/
+
+.order-btn-main,
+.buy-btn-main {
+    padding: 0 40px;
+}
+
+.order-btn {
+    width: 80%;
+}
+
+.buy-btn {
+    width: 80%;
+}
+
+.review-btn {
+    width: 164px;
+}
+
+.block-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 80px 220px;
+    width: 981px;
+    height: 1159px;
+    margin-bottom: 125px;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 380px;
+    height: 539px;
+    border-radius: 28px;
+    border: 1px solid var(--color-text-employee);
+    color: var(--color-text-employee);
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+}
+
+.card-img img {
+    width: 100%;
+}
+
+.card-name {
+    font-size: 32px;
+    margin-top: 7px;
+}
+
+.card-description {
+    font-size: 18px;
+    width: 85%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-sale {
+    font-family: Roboto;
+    position: absolute;
+    bottom: 80px;
+}
+
+.block-products .order-btn {
+    position: absolute;
+    bottom: 20px;
+}
+
+.block-products .buy-btn {
+    position: absolute;
+    bottom: 20px;
+}
+
+.block-products .review-btn {
+    position: absolute;
+    bottom: 20px;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu .catalog:first-child .block-products {
+    margin: 0;
+}
+
+/*---------------------------------reviews.html---------------------------------*/
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 193px;
+}
+
+.form-leave-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    height: 709px;
+    margin: 61px 0 57px 95px;
+    border-radius: 39px;
+    background-color: #EAEAEA;
+    border: 1px solid #535353;
+    font-family: 'PlayfairDisplay', Arial, sans-serif;
+}
+
+.group-input-name-lastname {
+    display: flex;
+    width: 90%;
+    gap: 9px;
+    margin-top: 59px;
+}
+
+.form-leave-review .review-btn {
+    width: 90%;
+}
+
+.form-heading-review {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.form-slogan-review {
+    font-size: 17px;
+}
+
+.group-input-name-lastname input {
+    width: 50%;
+    height: 61px;
+    border-radius: 999px;
+    border: none;
+    border: 1px solid #535353;
+    padding-left: 30px;
+    font-size: 20px;
+
+}
+
+.group-input-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 17px;
+    margin-bottom: 17px;
+    margin-top: 17px;
+}
+
+.group-input-reviews input {
+    width: 100%;
+    height: 61px;
+    border-radius: 999px;
+    border: none;
+    border: 1px solid #535353;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.group-input-reviews input:last-child {
+    height: 81px;
+    border-radius: 34px;
+}
+
+.group-input-reviews input::placeholder {
+    color: #535353;
+    font-size: 18px;
+}
+
+.group-input-reviews input:focus {
+    outline: none;
+}
+.burger-btn{
+    display: none;
+}
+.group-img-form {
+    position: relative;
+    width: 95%;
+    border-radius: 38px;
+    height: 808px;
+    background-image: url("../images/img-reviews.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/*---------------------------------sale.html---------------------------------*/
+
+.sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan-sale {
+    width: 60%;
+}
+
+.block-sale {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    background-image: url("../images/img-sale.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    margin-bottom: 308px;
+}
+
+.img-glass {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 136px;
+    padding-bottom: 30px;
+    width: auto;
+    height: auto;
+}
+
+.block-sale__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 35px;
+    height: 603px;
+    border-radius: 34px;
+    background-color: #FFEFD8;
+    padding: 30px 38px 0 38px;
+}
+
+.block-sale__heading {
+    text-align: center;
+    font-family: 'Climate_Crisis', Arial, sans-serif;
+    color: var(--color-text-employee);
+    font-size: 37px;
+}
+
+.block-sale__heading span {
+    color: var(--color-sale-span);
+}
+
+.block-sale__description {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: var(--color-text-employee);
+    margin-top: 30px;
+    font-size: 21px;
+}
+
+.sale-btn {
+    width: 210px;
+    height: 40px;
+    background-color: #B96F3C;
+    color: #F9F9F9;
+    border: none;
+    border-radius: 14px;
+    font-size: 20px;
+    margin-top: 70px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.sale-btn:hover {
+    background-color: #d38f66;
+}
+
+.sale-btn:active {
+    background-color: #915129;
+}
+
+.sale-btn a {
+    color: #F9F9F9;
+}
+
+.block-sale-avatars {
+    display: flex;
+    margin-top: 43px;
+}
+
+.navigation--open {
+    position: absolute;
+    top: -12px;
+    width: 500px;
+    height: 100vh;
+    padding: 100px 0 0 80px;
+    background-color: #434343;
+}
+
+.navigation--open .navigation__list {
+    flex-direction: column;
+}
+
+/*---------------------------------login.html / registration.html---------------------------------*/
+.login,
+.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form,
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f8f8;
+    border: 0.5px solid rgba(80, 80, 80, 0.56);
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    margin-bottom: 100px;
+}
+
+.login-form input,
+.registration-form input,
+.support-form input {
+    height: 40px;
+    margin: 15px 0;
+    border-radius: 9999px;
+    border: none;
+    padding-left: 25px;
+    font-size: 18px;
+    border: 0.5px solid rgba(80, 80, 80, 0.56);
+    color: #333333;
+}
+
+.login-form input:focus,
+.registration-form input:focus {
+    outline: none;
+}
+
+.btn-login,
+.btn-registration {
+    height: 40px;
+    border: none;
+    margin-top: 25px;
+    border-radius: 9999px;
+    color: #333333;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-form__heading,
+.registration-form__heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.login-form__link,
+.registration-form__link {
+    color: #67491b;
+}
+
+.login-form__text,
+.registration-form__text {
+    text-align: center;
+    margin-top: 20px;
+    color: #333333;
+}
+
+/*---------------------------------support.html---------------------------------*/
+
+.support-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.support-form input:focus,
+.support-form textarea:focus {
+    outline: none;
+}
+.support-form textarea {
+    padding: 20px;
+    font-size: 18px;
+    height: 300px;
+    border: 0.5px solid rgba(80, 80, 80, 0.56);
+    color: #333333;
+    resize: none;
+    border-radius: 20px;
+}
+
+.support-btn {
+    margin: 20px 0 100px;
+}
+
+/*---------------------------------about.html---------------------------------*/
+
+.about-us{
+    margin-bottom: 100px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.product-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border: 1px solid #3a3a3a;
+    border-radius: 30px;
+    padding: 40px;
+}
+.product-block__text{
+    margin-left: 20px;
+}
+.product-block__price{
+    display: flex;
+}
+.product-block .buy-btn{
+    margin-top: 25px;
+}
+.product-block .card-description{
+    text-align: start;
+}
+.product-block img{
+    border-radius: 30px;
+}
+@media (max-width: 1140px) {
+    .our-team {
+        margin: 0 53px;
+    }
+
+    .block-employee_avatar--phone, .block-employee_avatar {
+        margin: 0;
+    }
+
+    .description_text {
+        font-size: 12px;
+    }
+
+    .block-employee {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+
+    .marker-heading {
+        margin-top: 20px;
+        width: auto;
+        height: auto;
+
+    }
+
+    .roles_text {
+        font-size: 18px;
+        padding: 4px 7px;
+        transform: translateX(-5px);
+    }
+
+    .block-employee_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dividing-line {
+        width: 70%;
+    }
+
+    .block_our-team {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .block-employee_avatar--phone {
+        display: flex;
+    }
+
+    .block-employee_avatar--disabled {
+        display: none;
+    }
+
+    .block-employee {
+        flex-direction: column;
+    }
+
+    .navigation {
+        display: none;
+    }
+    .burger-btn{
+        display: block;
+    }
+
+    .transparent-sections-heading,
+    .table-reservation-sections-heading {
+        font-size: 22px;
+    }
+
+    .about-us .line-pattern {
+        width: 148px;
+        height: 20px;
+    }
+
+    .our-team .line-pattern {
+        width: 140px;
+        height: 20px;
+    }
+
+    .About-the-varieties .line-pattern {
+        width: 230px;
+        height: 20px;
+    }
+
+    .table-reservation .line-pattern {
+        width: 230px;
+        height: 20px;
+    }
+
+    .catalog .line-pattern,
+    .reviews .line-pattern,
+    .sale .line-pattern,
+    .login .line-pattern,
+    .registration .line-pattern,
+    .support .line-pattern,
+    .about .line-pattern {
+        width: 250px;
+        height: 20px;
+    }
+
+    .block_about-us {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .text-heading-about-us {
+        font-size: 28px;
+    }
+
+    .text-about-us {
+        font-size: 23px;
+    }
+
+    .block_img img {
+        transform: translateY(10px);
+        width: auto;
+        height: auto;
+        margin-top: 61px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    /*Блок Про сорта*/
+    .block-varieties_text .marker-heading {
+        width: 245px;
+    }
+
+    .About-the-varieties {
+        margin: 0 53px;
+    }
+
+    .text-varieties {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .block-varieties_text {
+        margin: 0;
+    }
+
+    .block-varieties-img img {
+        width: 350px;
+
+    }
+
+    .block-varieties-img-two {
+        margin-right: 53px;
+    }
+
+
+    /*Бронирование столика*/
+    .block-table-reservation {
+        width: auto;
+        height: auto;
+    }
+
+    .img-table-reservation img {
+        width: 450px;
+        transform: translateX(43px);
+    }
+
+    .form-table-reservation input {
+        width: 300px;
+        height: 35px;
+    }
+
+    .img-reviews {
+        display: none;
+    }
+
+    .block-sale {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .block-sale__text {
+        width: 500px;
+        margin: 0;
+        height: 400px;
+    }
+
+    .block-sale__heading {
+        font-size: 18px;
+    }
+
+    .block-sale__description {
+        font-size: 12px;
+    }
+
+    .img-glass {
+        display: none;
+    }
+
+    .img-glass img {
+        width: 200px;
+        height: 70px;
+    }
+
+    .navigation--open {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+    .block-products {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: auto;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 980px) {
+    footer {
+        height: auto;
+    }
+
+    .block-footer-one {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 90px 20px 74px 20px;
+        width: 30%;
+    }
+
+    .navigation-footer__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .group-social-network {
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .group-text {
+        font-size: 12px;
+    }
+
+    .Copyright {
+        margin-left: 20px;
+        margin-top: 18px;
+    }
+
+    .Discover {
+        margin-right: 20px;
+        margin-top: 18px;
+    }
+
+    .transparent-sections {
+        margin: 0 25px;
+    }
+}
+
+@media (max-width: 890px) {
+
+    .block-varieties {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .block-varieties-img {
+        width: auto;
+    }
+
+    .block-varieties--one {
+        flex-direction: column-reverse;
+    }
+
+    .block-about-the-varieties {
+        height: auto;
+    }
+
+    .block-varieties_text {
+        margin: 10px 0 0 30px;
+    }
+
+    .block-varieties-img-two {
+        margin-right: 0;
+    }
+
+    .block-varieties-img {
+        height: auto;
+    }
+
+    .block-varieties-img-two {
+        margin-bottom: 40px;
+    }
+
+    .marker-heading {
+        width: auto;
+    }
+
+    .roles_text {
+        width: 50%;
+    }
+
+    /*Бронирование столика*/
+    .img-table-reservation {
+        display: none;
+    }
+
+    .block-table-reservation {
+        width: 400px;
+    }
+
+    .form-table-reservation {
+        width: 100%;
+        height: 620px;
+    }
+
+    .form-table-reservation input {
+        width: 70%;
+        height: 55px;
+    }
+
+    .form-table-reservation .booking-btn {
+        width: 70%;
+        height: 40px;
+        font-size: 18px;
+
+    }
+
+    .group-img-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        width: auto;
+        height: auto;
+    }
+
+    .form-leave-review {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .icons {
+        margin-right: 40px;
+        width: 73px;
+        height: 17px;
+
+    }
+
+    .name_coffee_shop {
+        font-size: 30px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .booking-btn {
+        width: 185px;
+        height: 29px;
+        font-size: 13px;
+    }
+
+    /*Акция*/
+    .block-sale {
+        background: none;
+    }
+
+    .block-sale__text {
+        border: 1px solid #454545;
+        width: auto;
+        height: auto;
+    }
+
+    .block-sale__description {
+        width: auto;
+    }
+
+    .block-sale__heading {
+        width: auto;
+    }
+
+    .sale-btn {
+        font-size: 14px;
+        width: auto;
+        padding: 0 15px;
+    }
+
+    .block-sale-avatars img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .group-stars-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .group-stars-text img {
+        width: 40px;
+        height: 10px;
+    }
+}
+@media (max-width: 575px) {
+    .text-heading-about-us {
+        margin-left: 34px;
+    }
+
+    .text-heading-about-us {
+        font-size: 20px;
+    }
+
+    .block_about-us {
+        width: 270px;
+    }
+
+    .text-about-us {
+        font-size: 12px;
+        width: 210px;
+        margin-left: 34px;
+    }
+
+    .block_img img {
+        transform: translateY(10px);
+        width: 270px;
+        height: auto;
+        margin-top: 61px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .card {
+        width: 280px;
+        height: 439px;
+    }
+
+    .card img {
+        border-radius: 28px 28px 0 0;
+    }
+
+    .card-name {
+        font-size: 20px;
+    }
+
+    .card-description {
+        font-size: 14px;
+    }
+
+    .form-leave-review {
+        width: auto;
+        margin: 0 30px;
+    }
+
+    .form-slogan-review {
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .logo {
+        width: 37px;
+        height: 45px;
+    }
+
+    .slogan {
+        margin-bottom: 70px;
+    }
+
+    .icons {
+        height: auto;
+        width: auto;
+    }
+
+    .header-support-icons {
+        width: 15.31px;
+        height: 12.47px;
+    }
+
+    .header-entrance-icons {
+        width: 20.13px;
+        height: 20px;
+    }
+
+    .header-burger-icons {
+        width: 12.95px;
+        height: 11.33px;
+    }
+
+    .name_coffee_shop {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .header__text {
+        justify-content: center;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .name_coffee_shop {
+        margin: 0;
+    }
+
+    /*Блок Про сорта*/
+    .text-varieties {
+        font-size: 14px;
+    }
+
+    .block-varieties-img img {
+        width: 230px;
+        height: 170px;
+    }
+
+    .marker-heading.marker-heading-five {
+        width: 90%;
+        height: auto;
+        margin-bottom: 21px;
+    }
+
+    .roles_text {
+        width: 100%;
+    }
+
+    /*Бронирование столика*/
+    .block-table-reservation {
+        width: 70%;
+        height: 530px;
+    }
+
+    .form-table-reservation input {
+        width: 70%;
+        height: 40px;
+    }
+
+    .form-table-reservation input::placeholder {
+        font-size: 14px;
+    }
+
+    .form-table-reservation-heading {
+        font-size: 20px;
+    }
+
+    .form-table-reservation .booking-btn {
+        font-size: 14px;
+    }
+
+    .group-text {
+        font-size: 8px;
+    }
+
+    .form-leave-review {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .form-heading-review {
+        font-size: 25px;
+    }
+
+    .form-slogan-review {
+        font-size: 14px;
+        padding: 0 7px;
+    }
+
+    .group-input-name-lastname input,
+    .group-input-reviews input {
+        height: 40px;
+    }
+
+    .group-input-name-lastname input,
+    .group-input-reviews input::placeholder {
+        font-size: 14px;
+    }
+
+}
+
+@font-face {
+    font-family: 'Climate_Crisis';
+    src: url('../fonts/Climate_Crisis/ClimateCrisis-Regular-VariableFont_YEAR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
