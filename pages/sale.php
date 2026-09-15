@@ -1,3 +1,14 @@
+<?php
+date_default_timezone_set('Asia/Yekaterinburg');
+
+$hour = (int)date('H');
+
+if ($hour >= 20 || $hour < 6) {
+    $theme = 'night';
+} else {
+    $theme = 'day';
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +20,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/images/логотип.ico" type="image/x-icon">
 </head>
-<body>
+<body class="<?php echo $theme; ?>">
 <div class="block-header">
     <div class="dark-block"></div>
     <div class="img-header sale-img"></div>
@@ -120,5 +131,6 @@
         </div>
     </div>
 </footer>
+<script src="../assets/script/main.js"></script>
 </body>
 </html>
