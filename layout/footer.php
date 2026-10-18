@@ -84,13 +84,31 @@ if (!isset($root)) $root = '';
         </div>
 
         <?php
-        //Задание 2
         $text_footer = [$text_28, $text_29, $text_30, $text_31, $text_32, $text_33, $text_34, $text_35, $text_36, $text_37, $text_38];
+        ?>
+        <?php
+        //Задание 2
+        $page_text = mb_strtolower(implode(' ', $text_header) . " $text_1 $text_2 $text_3 $text_4 $text_5 $text_6 $text_7 $text_8 $text_9 $text_10 $text_11 $text_12 $text_13 $text_14 $text_15 $text_16 $text_17 $text_18 $text_19 $text_20 $text_21 " . implode(' ', $text_footer));
+        $vowels = 'аеёиоуыэюяaeiouy';
+        $vowel_count = 0;
+        for ($i = 0; $i < mb_strlen($vowels); $i++) {
+            $vowel = mb_substr($vowels, $i, 1);
+            $vowel_count += mb_substr_count($page_text, $vowel);
+        }
+        //Задание 3
+        $words = explode(' ', $page_text);
+        $word_count = 0;
+        for ($i = 0; $i < count($words); $i++) {
+            if ($words[$i] == '') {
+                continue;
+            }
+            $word_count++;
+        }
         ?>
         <div style="background-color: #3D3C3A; display: flex; justify-content:center; gap: 40px; padding-bottom: 30px;">
             <p style="color:#FFD7BA;">Гласных букв на странице: <?php echo $vowel_count; ?></p>
+            <p style="color:#FFD7BA;">Количество слов: <?php echo $word_count; ?></p>
         </div>
-
     </div>
 </footer>
 <script src="../assets/script/main.js"></script>

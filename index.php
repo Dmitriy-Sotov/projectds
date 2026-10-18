@@ -286,14 +286,4 @@ require 'layout/header.php';
             </section>
         </div>
     </main>
-<?php
-//Задание 2
-$page_text = mb_strtolower(implode(' ', $text_header) . " $text_1 $text_2 $text_3 $text_4 $text_5 $text_6 $text_7 $text_8 $text_9 $text_10 $text_11 $text_12 $text_13 $text_14 $text_15 $text_16 $text_17 $text_18 $text_19 $text_20 $text_21 " . implode(' ', $text_footer));
-$vowels = 'аеёиоуыэюяaeiouy';
-$vowel_count = 0;
-for ($i = 0; $i < mb_strlen($vowels); $i++) {
-    $vowel = mb_substr($vowels, $i, 1);
-    $vowel_count += mb_substr_count($page_text, $vowel);
-}
-?>
 <?php require 'layout/footer.php'; ?>
