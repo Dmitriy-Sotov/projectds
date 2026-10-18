@@ -1,3 +1,6 @@
+<?php
+if (!isset($root)) $root = '';
+?>
 <footer>
     <div class="block-footer-one">
         <div class="group-img">
@@ -6,11 +9,21 @@
             <div class="block-icons">
                 <div class="icon-tell">
                     <img src="../assets/images/icons-call.png" alt="Иконка телефона">
-                    <a href="tel:89823107546">89823107546</a>
+                    <a href="tel:89823107546">
+                        <?php
+                        $text_28 = '89823107546';
+                        echo $text_28;
+                        ?>
+                    </a>
                 </div>
                 <div class="icon-email">
                     <img src="../assets/images/icons-email.png" alt="Иконка email">
-                    <a href="mailto:sotov@dmitriy-alexandrovich.ru">sotov@dmitriy-alexandrovich.ru</a>
+                    <a href="mailto:sotov@dmitriy-alexandrovich.ru">
+                        <?php
+                        $text_29 = 'sotov@dmitriy-alexandrovich.ru';
+                        echo $text_29;
+                        ?>
+                    </a>
                 </div>
             </div>
         </div>
@@ -18,22 +31,33 @@
             <nav class="navigation-footer">
                 <ul class="navigation-footer__list">
                     <li class="navigation-footer__item"><a class="navigation-footer__link"
-                                                           href="../index.php">Главная</a></li>
-                    <li class="navigation-footer__item"><a class="navigation-footer__link" href="about.php">О нас</a>
-                    </li>
-                    <li class="navigation-footer__item"><a class="navigation-footer__link" href="menu.php">Меню</a>
-                    </li>
+                                                           href="<?php echo $root; ?>index.php"><?php $text_30 = "Главная";
+                            echo $text_30; ?></a></li>
                     <li class="navigation-footer__item"><a class="navigation-footer__link"
-                                                           href="reviews.php">Отзывы</a></li>
-                    <li class="navigation-footer__item"><a class="navigation-footer__link" href="accessories.php">Аксессуары</a>
-                    </li>
-                    <li class="navigation-footer__item"><a class="navigation-footer__link" href="sale.php">Акция</a>
-                    </li>
+                                                           href="<?php echo $root; ?>pages/about.php"><?php $text_31 = "О нас";
+                            echo $text_31; ?></a></li>
+                    <li class="navigation-footer__item"><a class="navigation-footer__link"
+                                                           href="<?php echo $root; ?>pages/menu.php"><?php $text_32 = "Меню";
+                            echo $text_32; ?></a></li>
+                    <li class="navigation-footer__item"><a class="navigation-footer__link"
+                                                           href="<?php echo $root; ?>pages/reviews.php"><?php $text_33 = "Отзывы";
+                            echo $text_33; ?></a></li>
+                    <li class="navigation-footer__item"><a class="navigation-footer__link"
+                                                           href="<?php echo $root; ?>pages/accessories.php"><?php $text_34 = "Аксессуары";
+                            echo $text_34; ?></a></li>
+                    <li class="navigation-footer__item"><a class="navigation-footer__link"
+                                                           href="<?php echo $root; ?>pages/sale.php"><?php $text_35 = "Акция";
+                            echo $text_35; ?></a></li>
                 </ul>
             </nav>
         </div>
         <div class="group-social-network">
-            <p>Наши Соцсети</p>
+            <p>
+                <?php
+                $text_36 = 'Наши Соцсети';
+                echo $text_36;
+                ?>
+            </p>
             <div class="block-social">
                 <img src="../assets/images/icons-Vk.svg" alt="Иконка Vk">
                 <img src="../assets/images/icons-Tg.svg" alt="Иконка Tg">
@@ -45,9 +69,28 @@
     <div class="block-footer-two">
         <img class="group-pattern" src="../assets/images/line-footer-pattern.png" alt="Линия узор">
         <div class="group-text">
-            <div class="Copyright">© Copyright 2026 | Sotov</div>
-            <div class="Discover">Discover the world of rare naps</div>
+            <div class="Copyright">
+                <?php
+                $text_37 = '© Copyright 2026 | Sotov';
+                echo $text_37;
+                ?>
+            </div>
+            <div class="Discover">
+                <?php
+                $text_38 = 'Discover the world of rare naps';
+                echo $text_38;
+                ?>
+            </div>
         </div>
+
+        <?php
+        //Задание 2
+        $text_footer = [$text_28, $text_29, $text_30, $text_31, $text_32, $text_33, $text_34, $text_35, $text_36, $text_37, $text_38];
+        ?>
+        <div style="background-color: #3D3C3A; display: flex; justify-content:center; gap: 40px; padding-bottom: 30px;">
+            <p style="color:#FFD7BA;">Гласных букв на странице: <?php echo $vowel_count; ?></p>
+        </div>
+
     </div>
 </footer>
 <script src="../assets/script/main.js"></script>

@@ -35,11 +35,14 @@ if ($hour >= 20 || $hour < 6) {
         <img class="logo" src="../assets/images/логотип.png" alt="Логотип">
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>index.php">Главная</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/about.php">О нас</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/menu.php">Меню</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/reviews.php">Отзывы</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/accessories.php">Аксессуары</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/sale.php">Акция</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>index.php"><?php $text_22 = "Главная"; echo $text_22; ?></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/about.php"><?php $text_23 = "О нас"; echo $text_23; ?></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/menu.php"><?php $text_24 = "Меню"; echo $text_24; ?></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/reviews.php"><?php $text_25 = "Отзывы"; echo $text_25; ?></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/accessories.php"><?php $text_26 = "Аксессуары"; echo $text_26; ?></a></li>
+                <li class="navigation__item"><a class="navigation__link" href="<?php echo $root; ?>pages/sale.php"><?php $text_27 = "Акция"; echo $text_27; ?></a></li>
+                <?php
+                $text_header = [$text_22, $text_23, $text_24, $text_25, $text_26, $text_27];
+                ?>
             </ul>
         </nav>
