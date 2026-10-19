@@ -86,8 +86,10 @@ if (!isset($root)) $root = '';
         <?php
         $text_footer = [$text_28, $text_29, $text_30, $text_31, $text_32, $text_33, $text_34, $text_35, $text_36, $text_37, $text_38];
         ?>
+
+        <!--Задание 2-->
+
         <?php
-        //Задание 2
         $page_text = mb_strtolower(implode(' ', $text_header) . " $text_1 $text_2 $text_3 $text_4 $text_5 $text_6 $text_7 $text_8 $text_9 $text_10 $text_11 $text_12 $text_13 $text_14 $text_15 $text_16 $text_17 $text_18 $text_19 $text_20 $text_21 " . implode(' ', $text_footer));
         $vowels = 'аеёиоуыэюяaeiouy';
         $vowel_count = 0;
@@ -95,7 +97,9 @@ if (!isset($root)) $root = '';
             $vowel = mb_substr($vowels, $i, 1);
             $vowel_count += mb_substr_count($page_text, $vowel);
         }
+
         //Задание 3
+
         $words = explode(' ', $page_text);
         $word_count = 0;
         for ($i = 0; $i < count($words); $i++) {
@@ -104,10 +108,88 @@ if (!isset($root)) $root = '';
             }
             $word_count++;
         }
+
+        //Задание 4
+
+        //Текущее время
+        $current_date = date('d.m.Y');
+        $now = time();
+
+        // Новый год в секундах
+        $next_year = (int)date('Y') + 1;
+        $new_year_time = strtotime("01.01.$next_year");
+
+        // Вычисление текущего времени
+        $diff = $new_year_time - $now;
+
+        //Перевод в секунды
+        $sec_in_min = 60;
+        $sec_in_hour = 60 * 60;
+        $sec_in_day = 60 * 60 * 24;
+
+        // Перевод секунд в дни, часы, минуты, секунды
+        $days = (int)($diff / $sec_in_day);
+        $hours = (int)(($diff % $sec_in_day) / $sec_in_hour);
+        $minutes = (int)(($diff % $sec_in_hour) / $sec_in_min);
+        $seconds = $diff % $sec_in_min;
+
+        // Склонение для слова день
+        if ($days % 100 >= 11 && $days % 100 <= 19) {
+            $day_word = 'дней';
+        } elseif ($days % 10 == 1) {
+            $day_word = 'день';
+        } elseif ($days % 10 >= 2 && $days % 10 <= 4) {
+            $day_word = 'дня';
+        } else {
+            $day_word = 'дней';
+        }
+
+        // Склонение для слова час
+        if ($hours % 100 >= 11 && $hours % 100 <= 19) {
+            $hour_word = 'часов';
+        } elseif ($hours % 10 == 1) {
+            $hour_word = 'час';
+        } elseif ($hours % 10 >= 2 && $hours % 10 <= 4) {
+            $hour_word = 'часа';
+        } else {
+            $hour_word = 'часов';
+        }
+
+        // Склонение для слова минута
+        if ($minutes % 100 >= 11 && $minutes % 100 <= 19) {
+            $min_word = 'минут';
+        } elseif ($minutes % 10 == 1) {
+            $min_word = 'минута';
+        } elseif ($minutes % 10 >= 2 && $minutes % 10 <= 4) {
+            $min_word = 'минуты';
+        } else {
+            $min_word = 'минут';
+        }
+
+        // Склонение для слова секунда
+        if ($seconds % 100 >= 11 && $seconds % 100 <= 19) {
+            $sec_word = 'секунд';
+        } elseif ($seconds % 10 == 1) {
+            $sec_word = 'секунда';
+        } elseif ($seconds % 10 >= 2 && $seconds % 10 <= 4) {
+            $sec_word = 'секунды';
+        } else {
+            $sec_word = 'секунд';
+        }
         ?>
+
         <div style="background-color: #3D3C3A; display: flex; justify-content:center; gap: 40px; padding-bottom: 30px;">
             <p style="color:#FFD7BA;">Гласных букв на странице: <?php echo $vowel_count; ?></p>
             <p style="color:#FFD7BA;">Количество слов: <?php echo $word_count; ?></p>
+            <p style="color:#FFD7BA;">Текущая дата: <?php echo $current_date; ?></p>
+            <p style="color:#FFD7BA;">
+                До Нового года: <?php
+                echo $days . ' ' . $day_word . ', ' .
+                    $hours . ' ' . $hour_word . ', ' .
+                    $minutes . ' ' . $min_word . ', ' .
+                    $seconds . ' ' . $sec_word;
+                ?>
+            </p>
         </div>
     </div>
 </footer>
